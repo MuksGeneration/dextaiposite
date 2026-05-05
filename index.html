@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dexta Investments & Microfinance Limited</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">DEXTA</div>
+  <ul class="nav-links">
+    <li><a href="#ipo">IPO</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#register">Register</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Get Started</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="grid-lines"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">Licensed Microfinance Institution</div>
+    <h1>Grow Your <span>Wealth</span><br>With Confidence</h1>
+    <p class="hero-sub">Dexta Investments & Microfinance Limited — offering loans, savings accounts, fixed deposits, and IPO access for every Kenyan.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Open Account</button>
+      <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Explore Services</button>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-num">8–10%</span>
+        <span class="stat-label">Annual Savings Interest</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">12%</span>
+        <span class="stat-label">Fixed Deposit Rate</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">Ksh 150</span>
+        <span class="stat-label">IPO Starting Price</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">Customer Support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span class="ticker-item"><strong>DEXTA IPO</strong> <span class="ticker-sep">|</span> Starting Price: Ksh 150 <span class="ticker-sep">|</span> Min Shares: 100</span>
+    <span class="ticker-item"><strong>SAVINGS</strong> <span class="ticker-sep">|</span> Earn up to 10% per annum</span>
+    <span class="ticker-item"><strong>FIXED DEPOSITS</strong> <span class="ticker-sep">|</span> 12% interest — 1 year & above</span>
+    <span class="ticker-item"><strong>LOANS</strong> <span class="ticker-sep">|</span> Fast approval — apply today</span>
+    <span class="ticker-item"><strong>CUSTOMER CARE</strong> <span class="ticker-sep">|</span> Available 24/7 on WhatsApp</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><strong>DEXTA IPO</strong> <span class="ticker-sep">|</span> Starting Price: Ksh 150 <span class="ticker-sep">|</span> Min Shares: 100</span>
+    <span class="ticker-item"><strong>SAVINGS</strong> <span class="ticker-sep">|</span> Earn up to 10% per annum</span>
+    <span class="ticker-item"><strong>FIXED DEPOSITS</strong> <span class="ticker-sep">|</span> 12% interest — 1 year & above</span>
+    <span class="ticker-item"><strong>LOANS</strong> <span class="ticker-sep">|</span> Fast approval — apply today</span>
+    <span class="ticker-item"><strong>CUSTOMER CARE</strong> <span class="ticker-sep">|</span> Available 24/7 on WhatsApp</span>
+  </div>
+</div>
+
+<!-- IPO -->
+<section id="ipo">
+  <div class="section-inner">
+    <div class="section-tag">Public Offering</div>
+    <h2 class="section-title">Initial Public <span>Offering</span></h2>
+
+    <div class="ipo-grid">
+      <div class="ipo-visual">
+        <div class="ipo-card main">
+          <div class="ipo-ticker">
+            <div class="ticker-symbol">DEXTA</div>
+            <span class="ticker-badge">▲ LIVE</span>
+          </div>
+          <div class="price-display"><span>Ksh</span> <span id="ipoPrice">150.00</span></div>
+          <div class="price-sub">Starting Price Per Share &nbsp;·&nbsp; Min 100 Shares</div>
+
+          <div class="ipo-bar-label">
+            <span>Subscription Progress</span>
+            <span id="subPercentText">68%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+          </div>
+
+          <div class="ipo-meta">
+            <div class="ipo-meta-item">
+              <strong>Ksh 15,000</strong>
+              Min Investment
+            </div>
+            <div class="ipo-meta-item">
+              <strong id="shareCount">100</strong>
+              Shares Calc
+            </div>
+            <div class="ipo-meta-item">
+              <strong id="totalInvestment">Ksh 15,000</strong>
+              Total Cost
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IPO FORM -->
+      <div class="ipo-form-container">
+        <div class="ipo-form">
+          <h3>Subscribe to DEXTA IPO</h3>
+          
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="ipoName" class="form-input" placeholder="Your full name">
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="ipoEmail" class="form-input" placeholder="your@email.com">
+          </div>
+
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="ipoPhone" class="form-input" placeholder="+254 7XX XXX XXX">
+          </div>
+
+          <div class="form-group">
+            <label>National ID</label>
+            <input type="text" id="ipoNID" class="form-input" placeholder="Your National ID">
+          </div>
+
+          <div class="form-group">
+            <label>Number of Shares</label>
+            <input type="number" id="shareQuantity" class="form-input" placeholder="100" min="100" value="100">
+            <small>Minimum 100 shares (Ksh 15,000)</small>
+          </div>
+
+          <div class="form-group">
+            <label>OTP Verification</label>
+            <div class="otp-container">
+              <input type="text" id="ipoOTP" class="form-input" placeholder="Enter OTP">
+              <button class="btn-secondary" id="sendOtpBtn">Send OTP</button>
+            </div>
+          </div>
+
+          <button class="btn-primary ipo-submit" id="ipoSubmit">Complete Registration</button>
+          <button class="btn-payment" id="payNowBtn">💳 Pay & Subscribe</button>
+
+          <div class="ipo-terms">
+            <small>By subscribing, you agree to Dexta's Terms & Conditions</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner reveal">
+    <div class="section-tag">What People Say</div>
+    <h2 class="section-title">Trusted by <span>Kenyans</span></h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testimonial-text">"Dexta made investing so simple. I got my shares in minutes with just my phone and ID. The live platform is fantastic!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JK</div>
+          <div class="author-info">
+            <strong>John Kipchoge</strong>
+            <span>IPO Investor</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testimonial-text">"The 12% fixed deposit rate is unbeatable. My money is working for me safely while I earn amazing returns. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div class="author-info">
+            <strong>Amina Mohamed</strong>
+            <span>Fixed Deposit Customer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testimonial-text">"I got a loan within 48 hours with minimal paperwork. Their customer service is phenomenal — available 24/7 on WhatsApp!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PE</div>
+          <div class="author-info">
+            <strong>Peter Emiango</strong>
+            <span>Loan Customer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testimonial-text">"My savings earn 10% interest here! The platform is secure, transparent, and I can withdraw anytime. Best decision ever."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RN</div>
+          <div class="author-info">
+            <strong>Ruth Njeri</strong>
+            <span>Savings Account Holder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner reveal">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Financial <span>Services</span></h2>
+
+    <div class="services-grid">
+      <!-- Loans -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-credit-card"></i></div>
+        <div class="service-title">Microfinance Loans</div>
+        <p class="service-desc">Quick, accessible loans for individuals and businesses. Minimal requirements, fast processing.</p>
+        <ul class="service-list">
+          <li>National ID required</li>
+          <li>TIN Number</li>
+          <li>Passport photo</li>
+          <li>Mobile number for disbursement</li>
+          <li>Address & employment status</li>
+        </ul>
+      </div>
+
+      <!-- Savings -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-piggy-bank"></i></div>
+        <div class="service-title">Savings Accounts</div>
+        <p class="service-desc">Grow your money with competitive interest rates. Simple to open, safe to hold.</p>
+        <ul class="service-list">
+          <li>National ID required</li>
+          <li>Mobile number for transactions</li>
+          <li>Earn 8–10% interest per annum</li>
+        </ul>
+        <span class="rate-badge">Up to 10% p.a.</span>
+      </div>
+
+      <!-- Fixed Deposits -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="service-title">Fixed Deposits</div>
+        <p class="service-desc">Lock in your funds for 1 year or more and earn premium returns.</p>
+        <ul class="service-list">
+          <li>Minimum 1 year tenure</li>
+          <li>Up to 12% interest per annum</li>
+          <li>Secure & guaranteed returns</li>
+        </ul>
+        <span class="rate-badge">Up to 12% p.a.</span>
+      </div>
+
+      <!-- IPO Investment -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+        <div class="service-title">IPO Investment</div>
+        <p class="service-desc">Be part of Dexta's growth story. Buy shares starting at Ksh 150 on our live platform.</p>
+        <ul class="service-list">
+          <li>Starting price: Ksh 150/share</li>
+          <li>Minimum 100 shares</li>
+          <li>Auto-updating platform</li>
+          <li>Register with email + OTP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section id="requirements">
+  <div class="section-inner reveal">
+    <div class="section-tag">Get Started</div>
+    <h2 class="section-title">Account <span>Requirements</span></h2>
+
+    <div class="req-grid">
+      <div class="req-card">
+        <span class="req-num">01</span>
+        <div class="req-title">Loan Requirements</div>
+        <ul class="req-list">
+          <li>National ID</li>
+          <li>TIN Number</li>
+          <li>Passport Photo</li>
+          <li>Mobile Number (for receiving money)</li>
+          <li>Physical Address</li>
+          <li>Employment Status</li>
+        </ul>
+      </div>
+
+      <div class="req-card">
+        <span class="req-num">02</span>
+        <div class="req-title">Savings Account</div>
+        <ul class="req-list">
+          <li>National ID</li>
+          <li>Mobile Number (for receiving money)</li>
+          <li>Earn 8–10% interest per annum</li>
+          <li>Fixed deposits: 12% for 1+ year</li>
+        </ul>
+      </div>
+
+      <div class="req-card">
+        <span class="req-num">03</span>
+        <div class="req-title">Account Creation</div>
+        <ul class="req-list">
+          <li>National ID (front & back scan)</li>
+          <li>Face scan / selfie</li>
+          <li>Personal phone number</li>
+          <li>Full legal names</li>
+        </ul>
+      </div>
+
+      <div class="req-card">
+        <span class="req-num">04</span>
+        <div class="req-title">IPO Registration</div>
+        <ul class="req-list">
+          <li>Valid email address</li>
+          <li>Phone number for OTP verification</li>
+          <li>Min 100 shares at Ksh 150 each</li>
+          <li>Live platform access after registration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register">
+  <div class="section-inner reveal">
+    <div class="section-tag">Join Dexta</div>
+    <h2 class="section-title">Register <span>Today</span></h2>
+
+    <div class="register-wrap">
+      <div class="register-form">
+        <div class="form-title">Create Your Account</div>
+        <div class="form-sub">Enter your details to get started</div>
+
+        <div class="form-group">
+          <label class="form-label">Full Names</label>
+          <input class="form-input" type="text" name="name" placeholder="Your legal full names"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" type="email" name="email" placeholder="your@email.com"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input class="form-input" type="tel" name="phone" placeholder="+254 7XX XXX XXX"/>
+          <div class="otp-note"><i class="fas fa-mobile-alt"></i> An OTP will be sent to verify your number</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">National ID Number</label>
+          <input class="form-input" type="text" name="national_id" placeholder="Your National ID"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service Interested In</label>
+          <select class="form-input" name="service" style="cursor:pointer;">
+            <option value="" style="background:#1A1A26;">Select a service…</option>
+            <option style="background:#1A1A26;">Loan</option>
+            <option style="background:#1A1A26;">Savings Account</option>
+            <option style="background:#1A1A26;">Fixed Deposit</option>
+            <option style="background:#1A1A26;">IPO Investment</option>
+          </select>
+        </div>
+        <button class="form-submit">Submit Registration</button>
+      </div>
+
+      <div class="register-info">
+        <h3>Trusted by thousands<br>across <span>Kenya</span></h3>
+        <p>Our registration process is simple, secure, and fully digital. Once registered, you'll have access to loans, savings, fixed deposits, and our live IPO platform.</p>
+
+        <div class="contact-cards">
+          <a href="https://wa.me/254787327180" target="_blank" class="contact-card">
+            <span class="contact-icon"><i class="fab fa-whatsapp"></i></span>
+            <div>
+              <div class="contact-label">WhatsApp — 24/7</div>
+              <div class="contact-value">+254 787 327 180</div>
+            </div>
+          </a>
+          <a href="tel:0768629120" class="contact-card">
+            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="contact-label">Call Our Crew Directly</div>
+              <div class="contact-value">0768 629 120</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">DEXTA</div>
+  <div class="footer-tagline">Investments & Microfinance Limited</div>
+  <div class="footer-links">
+    <a href="#ipo">IPO Platform</a>
+    <a href="#services">Services</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#register">Register</a>
+    <a href="https://wa.me/254787327180" target="_blank">Contact</a>
+  </div>
+  <div class="footer-bottom">© 2026 Dexta Investments & Microfinance Limited. All rights reserved.</div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/254787327180" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
